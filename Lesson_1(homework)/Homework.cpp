@@ -78,66 +78,48 @@ public:
 
 	void Set_SFP()
 	{
-		char temp_sfp[200];
 		cout << "Enter SFP:\n";
-		cin >> temp_sfp;
-		strcpy(sfp, temp_sfp);
+		cin >> sfp;
 	}
 	void Set_Date_of_birth()
 	{
-		char temp_date_of_birth[100];
 		cout << "Enter date of birth:\n";
-		cin >> temp_date_of_birth;
-		strcpy(date_of_birth, temp_date_of_birth);
+		cin >> date_of_birth;
 	}
 	void Set_Phone()
 	{
-		char temp_phone[100];
 		cout << "Enter phone:\n";
-		cin >> temp_phone;
-		strcpy(phone, temp_phone);
+		cin >> phone;
 	}
 	void Set_City()
 	{
-		char temp_city[50];
 		cout << "Enter city:\n";
-		cin >> temp_city;
-		strcpy(city, temp_city);
+		cin >> city;
 	}
 	void Set_Country()
 	{
-		char temp_country[50];
 		cout << "Enter country:\n";
-		cin >> temp_country;
-		strcpy(country, temp_country);
+		cin >> country;
 	}
 	void Set_Name_educational_institution()
 	{
-		char temp_name_educational_institution[200];
 		cout << "Enter name educational institution:\n";
-		cin >> temp_name_educational_institution;
-		strcpy(name_educational_institution, temp_name_educational_institution);
+		cin >> name_educational_institution;
 	}
 	void Set_City_institution()
 	{
-		char temp_city_institution[50];
 		cout << "Enter city institution:\n";
-		cin >> temp_city_institution;
-		strcpy(city_institution, temp_city_institution);
+		cin >> city_institution;
 	}
 	void Set_Country_institution()
 	{
-		char temp_country_institution[50];
 		cout << "Enter country institution:\n";
-		cin >> temp_country_institution;
-		strcpy(country_insitution, temp_country_institution);
+		cin >> country_insitution;
 	}
 	void Set_Group_number()
 	{
-		int temp_group_number;
 		cout << "Enter group number:\n";
-		cin >> temp_group_number;
-		group_number = temp_group_number;
+		cin >> group_number;
 	}
 
 	void Add_Student()
@@ -178,6 +160,38 @@ public:
 		cout << "Y = " << y << endl;
 		cout << "Z = " << z << endl;
 	}
+
+	int Get_X()
+	{
+		return x;
+	}
+	int Get_Y()
+	{
+		return y;
+	}
+	int Get_Z()
+	{
+		return z;
+	}
+
+	void Set_X()
+	{
+		/*int temp_x;*/
+		cout << "Enter x:\n";
+		cin >> x;
+	}
+	void Set_Y()
+	{
+		/*int temp_x;*/
+		cout << "Enter y:\n";
+		cin >> y;
+	}
+	void Set_Z()
+	{
+		/*int temp_x;*/
+		cout << "Enter z:\n";
+		cin >> z;
+	}
 };
 
 
@@ -185,14 +199,19 @@ int main()
 {
 	// Завдання 1
 
-	/*Student person;
-	person.Show_Student();
-	person.Set_City();
-	person.Show_Student();
-	person.Add_Student();
-	person.Show_Student();*/
+	//Student person;
+	//person.Show_Student();
+	////person.Set_City();
+	////person.Show_Student();
+	///*char* country_insitution = person.Get_Country_insitution();
+	//cout << "Country insitution = " << country_insitution << endl;
+	//person.Add_Student();
+	//person.Show_Student();*/
 
 	Point point;
 	point.Show_Point();
+	point.Set_Y();
+	point.Show_Point();
+
 	return 0;
 }
