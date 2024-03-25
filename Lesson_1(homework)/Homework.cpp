@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+﻿#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string.h>
 
@@ -140,18 +140,59 @@ public:
 		group_number = temp_group_number;
 	}
 
+	void Add_Student()
+	{
+		Set_SFP();
+		Set_Date_of_birth();
+		Set_Phone();
+		Set_City();
+		Set_Country();
+		Set_Name_educational_institution();
+		Set_City_institution();
+		Set_Country_institution();
+		Set_Group_number();
+	}
+};
 
+class Point
+{
+private:
+	int x;
+	int y;
+	int z;
+public:
+	Point()
+	{
+		FILE* p_file = fopen(R"(F:\Temp_file\temp_point.txt)", "r");
+		if (p_file == nullptr)
+		{
+			cout << "ERROR!\n";
+			exit(-1);
+		}
+		fscanf(p_file, "%i %i %i", &x, &y, &z);
+	}
 
+	void Show_Point()
+	{
+		cout << "X = " << x << endl;
+		cout << "Y = " << y << endl;
+		cout << "Z = " << z << endl;
+	}
 };
 
 
 int main()
 {
-	Student person;
+	// Завдання 1
+
+	/*Student person;
 	person.Show_Student();
 	person.Set_City();
 	person.Show_Student();
+	person.Add_Student();
+	person.Show_Student();*/
 
-
+	Point point;
+	point.Show_Point();
 	return 0;
 }
