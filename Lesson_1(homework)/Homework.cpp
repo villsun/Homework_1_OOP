@@ -192,6 +192,19 @@ public:
 		cout << "Enter z:\n";
 		cin >> z;
 	}
+
+	void Add_Point()
+	{
+		Set_X();
+		Set_Y();
+		Set_Z();
+	}
+
+	void Save_to_File()
+	{
+		FILE* p_file = fopen(R"(F:\Temp_file\temp_point.txt)", "w");
+		fprintf(p_file, "%i %i %i", x, y, z);
+	}
 };
 
 
@@ -212,6 +225,10 @@ int main()
 	point.Show_Point();
 	point.Set_Y();
 	point.Show_Point();
+	point.Add_Point();
+	point.Show_Point();
+	point.Save_to_File();
+
 
 	return 0;
 }
